@@ -35,12 +35,6 @@ npm i ofd.ru
   ```bash
   bun add ofd.ru
   ```
-
-  <img height="18" src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/main/icons/deno.svg"> Deno
-
-  ```typescript
-  import { Moysklad } from "https://esm.sh/ofd.ru";
-  ```
 </details>
 
 Библиотека требует Node.js версии 18 и выше, либо другой соответствующей среды исполнения, в которой доступен [`fetch` API](https://developer.mozilla.org/en-US/docs/Web/API/fetch).
