@@ -1,0 +1,29 @@
+{
+  "name": "ofd.ru",
+  "version": "0.0.1",
+  "description": "API клиент ОФД OFD.ru на TypeScript",
+  "sideEffects": false,
+  "type": "module",
+  "keywords": [
+    "ofd",
+    "ofd.ru",
+    "ferma",
+    "renta",
+    "api",
+    "typescript"
+  ],
+  "homepage": "https://github.com/MonsterDeveloper/ofd.ru",
+  "repository": {
+      "type": "git",
+      "url": "git+https://github.com/MonsterDeveloper/ofd.ru.git"
+    },
+    "bugs": {
+      "url": "https://github.com/MonsterDeveloper/ofd.ru/issues"
+    },
+    "license": "GPL-3.0-only",
+    "author": "Andrei Bobkov <me@ctoofeverything.dev>",
+    "engines": {
+      "node": ">=18.0.0"
+    },
+    "files": ["dist"]
+}
