@@ -1,29 +1,42 @@
 {
-  "name": "ofd.ru",
-  "version": "0.0.1",
-  "description": "API клиент ОФД OFD.ru на TypeScript",
-  "sideEffects": false,
-  "type": "module",
-  "keywords": [
-    "ofd",
-    "ofd.ru",
-    "ferma",
-    "renta",
-    "api",
-    "typescript"
-  ],
-  "homepage": "https://github.com/MonsterDeveloper/ofd.ru",
-  "repository": {
-      "type": "git",
-      "url": "git+https://github.com/MonsterDeveloper/ofd.ru.git"
-    },
-    "bugs": {
-      "url": "https://github.com/MonsterDeveloper/ofd.ru/issues"
-    },
-    "license": "GPL-3.0-only",
-    "author": "Andrei Bobkov <me@ctoofeverything.dev>",
-    "engines": {
-      "node": ">=18.0.0"
-    },
-    "files": ["dist"]
+	"name": "ofd.ru",
+	"version": "0.0.1",
+	"description": "API клиент ОФД OFD.ru на TypeScript",
+	"sideEffects": false,
+	"type": "module",
+	"keywords": ["ofd", "ofd.ru", "ferma", "renta", "api", "typescript"],
+	"homepage": "https://github.com/MonsterDeveloper/ofd.ru",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MonsterDeveloper/ofd.ru.git"
+	},
+	"bugs": {
+		"url": "https://github.com/MonsterDeveloper/ofd.ru/issues"
+	},
+	"license": "GPL-3.0-only",
+	"author": "Andrei Bobkov <me@ctoofeverything.dev>",
+	"engines": {
+		"node": ">=18.0.0"
+	},
+	"files": ["dist"],
+	"devDependencies": {
+		"@biomejs/biome": "1.8.3",
+		"@types/node": "^20.14.10",
+		"typescript": "^5.5.3",
+		"vite": "^5.3.3",
+		"vite-plugin-dts": "^3.9.1",
+		"vite-tsconfig-paths": "^4.3.2",
+		"vitest": "^2.0.3"
+	},
+	"scripts": {
+		"format": "bunx @biomejs/biome format --write .",
+		"lint": "bunx @biomejs/biome lint --write .",
+		"build": "vite build"
+	},
+	"exports": {
+		".": {
+			"import": "./dist/odf-ru.js",
+			"types": "./dist/index.d.ts"
+		}
+	}
 }

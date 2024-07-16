@@ -1,0 +1,29 @@
+{
+	"compilerOptions": {
+		/* Base Options: */
+    "baseUrl": ".",
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"target": "es2022",
+		"allowJs": false,
+		"resolveJsonModule": true,
+		"moduleDetection": "force",
+		"isolatedModules": true,
+		"verbatimModuleSyntax": true,
+
+		/* Strictness */
+		"strict": true,
+		"noUncheckedIndexedAccess": true,
+		"noImplicitOverride": true,
+
+		"module": "ESNext",
+		"noEmit": true,
+    "moduleResolution": "Bundler",
+
+		"lib": ["es2022", "dom"],
+
+    "paths": {
+      "@/*": ["src/*"]
+    }
+	}
+}
