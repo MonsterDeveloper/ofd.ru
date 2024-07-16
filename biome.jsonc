@@ -3,13 +3,21 @@
 	"organizeImports": {
 		"enabled": true
 	},
+	"formatter": {
+		"enabled": true
+	},
 	"linter": {
 		"enabled": true,
 		"rules": {
 			"recommended": true
 		}
 	},
+	"javascript": {
+		"formatter": {
+			"semicolons": "asNeeded"
+		}
+	},
 	"files": {
-		"ignore": ["node_modules", "dist"]
+		"ignore": ["node_modules", "dist", "coverage"]
 	}
 }
