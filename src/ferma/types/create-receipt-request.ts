@@ -22,7 +22,7 @@ interface BaseCreateReceiptRequest {
 	 *
 	 * **Важно!** Изменяйте идентификатор для перепробития неуспешных чеков в Ferma® (`StatusCode`: `3`)
 	 */
-	InvoiceId?: string
+	InvoiceId: string
 
 	/**
 	 * Интервал повтора проверки КМ в честном знаке (в секундах).
