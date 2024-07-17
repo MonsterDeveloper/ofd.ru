@@ -1,5 +1,5 @@
 import { FermaAuthedFetcher, FermaFetcher } from "./fetcher"
-import type { CreateReceiptRequest } from "./types"
+import type { CreateReceiptRequest, GetReceiptResponse } from "./types"
 
 /**
  * Ferma®
@@ -43,7 +43,8 @@ export class Ferma {
 	}
 
 	/**
-	 * Запрос на формирование фискальных документов
+	 * Запрос на формирование фискальных документов.
+	 *
 	 * @param data Данные для формирования документа
 	 * @returns ID документа
 	 *
@@ -63,5 +64,39 @@ export class Ferma {
 		)
 
 		return ReceiptId
+	}
+
+	/**
+	 * Проверка статуса кассового чека.
+	 *
+	 * Важно! Информация о статусе кассового чека хранится в оперативной памяти сервиса Ferma® всего сутки. После истечения суток при повторном запросе статуса кассового чека в ответ будет выведена ошибка «Чек не найден». После истечения суток информацию о статусе кассового чека можно получить в запросе реестра кассовых чеков.
+	 *
+	 * @param data `InvoiceId` или `ReceiptId` чека
+	 * @returns Статус чека
+	 *
+	 * @see https://ofd.ru/razrabotchikam/ferma#%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0_%D1%81%D1%82%D0%B0%D1%82%D1%83%D1%81%D0%B0_%D0%BA%D0%B0%D1%81%D1%81%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D1%87%D0%B5%D0%BA%D0%B0
+	 */
+	async getReceipt(
+		data:
+			| {
+					/** Идентификатор, присвоенный вашей информационной системой в запросе на формирование кассового чека. */
+					InvoiceId: string
+			  }
+			| {
+					/** Идентификатор, присвоенный сервисом Ferma® */
+					ReceiptId: string
+			  },
+	) {
+		const { Data } = await this.authedFetcher.fetch<GetReceiptResponse>(
+			"/api/kkt/cloud/status",
+			{
+				method: "POST",
+				body: JSON.stringify({
+					Request: data,
+				}),
+			},
+		)
+
+		return Data
 	}
 }
