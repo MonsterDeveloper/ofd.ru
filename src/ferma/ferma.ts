@@ -88,7 +88,7 @@ export class Ferma {
 			  },
 	) {
 		const { Data } = await this.authedFetcher.fetch<GetReceiptResponse>(
-			"/api/kkt/cloud/status",
+			"/kkt/cloud/status",
 			{
 				method: "POST",
 				body: JSON.stringify({
