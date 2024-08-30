@@ -6,6 +6,8 @@
 export const FERMA_TEST_OPTIONS = {
 	/** Базовый тестовый URL */
 	baseUrl: "https://ferma-test.ofd.ru/api",
+	/** ИНН тестовой организации */
+	inn: "3245001416",
 	/** Данные для тестирования ФФД версии 1.1 */
 	ffd11: {
 		/** Логин */
