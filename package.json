@@ -1,6 +1,6 @@
 {
 	"name": "ofd.ru",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"description": "API клиент ОФД OFD.ru на TypeScript",
 	"sideEffects": false,
 	"type": "module",
