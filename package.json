@@ -4,14 +4,7 @@
 	"description": "API клиент ОФД OFD.ru на TypeScript",
 	"sideEffects": false,
 	"type": "module",
-	"keywords": [
-		"ofd",
-		"ofd.ru",
-		"ferma",
-		"renta",
-		"api",
-		"typescript"
-	],
+	"keywords": ["ofd", "ofd.ru", "ferma", "renta", "api", "typescript"],
 	"packageManager": "bun@1.1.42",
 	"homepage": "https://github.com/MonsterDeveloper/ofd.ru",
 	"repository": {
@@ -26,9 +19,7 @@
 	"engines": {
 		"node": ">=18.0.0"
 	},
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"devDependencies": {
 		"@arethetypeswrong/cli": "^0.17.2",
 		"@biomejs/biome": "1.9.4",
@@ -54,6 +45,9 @@
 		"check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm --profile node16",
 		"update": "bunx npm-check-updates -ui --reject bun"
 	},
+	"publishConfig": {
+		"provenance": true
+	},
 	"main": "./dist/index.js",
 	"exports": {
 		".": {
@@ -61,7 +55,5 @@
 			"types": "./dist/index.d.ts"
 		}
 	},
-	"trustedDependencies": [
-		"@biomejs/biome"
-	]
+	"trustedDependencies": ["@biomejs/biome"]
 }
