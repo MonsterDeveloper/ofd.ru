@@ -4,7 +4,7 @@ import type { CreateReceiptRequest, GetReceiptResponse } from "./types"
 /**
  * Ferma®
  *
- * Версия 2.66 от 27.06.2024
+ * Версия 2.67 от 10.12.2024
  *
  * @see https://ofd.ru/razrabotchikam/ferma
  */
