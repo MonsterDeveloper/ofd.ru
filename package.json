@@ -24,9 +24,12 @@
 		"@arethetypeswrong/cli": "^0.17.2",
 		"@biomejs/biome": "1.8.3",
 		"@changesets/cli": "^2.27.11",
+		"@commitlint/cli": "^19.6.1",
+		"@commitlint/config-conventional": "^19.6.0",
 		"@total-typescript/shoehorn": "^0.1.2",
 		"@types/node": "^20.14.10",
 		"@vitest/coverage-v8": "^2.0.3",
+		"husky": "^9.1.7",
 		"msw": "^2.3.1",
 		"typescript": "^5.5.3",
 		"vite": "^5.3.3",
@@ -35,6 +38,7 @@
 		"vitest": "^2.0.3"
 	},
 	"scripts": {
+		"prepare": "husky",
 		"check": "biome check",
 		"typecheck": "tsc",
 		"build": "vite build",
