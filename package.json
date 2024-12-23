@@ -22,20 +22,19 @@
 	"files": ["dist"],
 	"devDependencies": {
 		"@arethetypeswrong/cli": "^0.17.2",
-		"@biomejs/biome": "1.8.3",
+		"@biomejs/biome": "1.9.4",
 		"@changesets/cli": "^2.27.11",
 		"@commitlint/cli": "^19.6.1",
 		"@commitlint/config-conventional": "^19.6.0",
 		"@total-typescript/shoehorn": "^0.1.2",
-		"@types/node": "^20.14.10",
-		"@vitest/coverage-v8": "^2.0.3",
+		"@types/node": "^22.10.2",
+		"@vitest/coverage-v8": "^2.1.8",
 		"husky": "^9.1.7",
-		"msw": "^2.3.1",
-		"typescript": "^5.5.3",
-		"vite": "^5.3.3",
-		"vite-plugin-dts": "^3.9.1",
-		"vite-tsconfig-paths": "^4.3.2",
-		"vitest": "^2.0.3"
+		"msw": "^2.7.0",
+		"typescript": "^5.7.2",
+		"vite-plugin-dts": "^4.4.0",
+		"vite-tsconfig-paths": "^5.1.4",
+		"vitest": "^2.1.8"
 	},
 	"scripts": {
 		"prepare": "husky",
@@ -46,10 +45,12 @@
 		"check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm --profile node16",
 		"update": "bunx npm-check-updates -ui --reject bun"
 	},
+	"main": "./dist/index.js",
 	"exports": {
 		".": {
-			"import": "./dist/ofd-ru.js",
+			"import": "./dist/index.js",
 			"types": "./dist/index.d.ts"
 		}
-	}
+	},
+	"trustedDependencies": ["@biomejs/biome"]
 }

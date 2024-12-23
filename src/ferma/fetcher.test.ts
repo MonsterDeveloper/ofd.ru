@@ -24,24 +24,26 @@ describe("FermaFetcher", () => {
 		)
 	})
 
-	it("throws a FermaApiError when API returns an error", () => {
+	it("throws a FermaApiError when API returns an error", async () => {
 		const fetcher = new FermaFetcher()
 
-		expect(fetcher.fetch("/error")).rejects.toThrowError(FermaApiError)
+		await expect(fetcher.fetch("/error")).rejects.toThrowError(FermaApiError)
 	})
 
-	it("throws a FermaError when API returns invalid JSON", () => {
+	it("throws a FermaError when API returns invalid JSON", async () => {
 		const fetcher = new FermaFetcher()
 
-		expect(fetcher.fetch("/error/invalid-json")).rejects.toThrowError(
+		await expect(fetcher.fetch("/error/invalid-json")).rejects.toThrowError(
 			"Неверный JSON ответ",
 		)
 	})
 
-	it("throws a FermaError when API returns a network error", () => {
+	it("throws a FermaError when API returns a network error", async () => {
 		const fetcher = new FermaFetcher()
 
-		expect(fetcher.fetch("/error/network")).rejects.toThrowError(FermaError)
+		await expect(fetcher.fetch("/error/network")).rejects.toThrowError(
+			FermaError,
+		)
 	})
 })
 

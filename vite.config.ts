@@ -9,9 +9,8 @@ export default defineConfig({
 		minify: false,
 		sourcemap: true,
 		lib: {
-			entry: fileURLToPath(new URL("src/index.ts", import.meta.url)),
+			entry: [fileURLToPath(new URL("src/index.ts", import.meta.url))],
 			name: "ofd.ru",
-			fileName: "ofd-ru",
 			formats: ["es"],
 		},
 	},
@@ -19,6 +18,7 @@ export default defineConfig({
 		tsconfigPaths(),
 		dts({
 			entryRoot: "src",
+			rollupTypes: true,
 		}),
 	],
 	test: {
