@@ -1,7 +1,7 @@
-import { describe, it, expect } from "vitest"
-import { Ferma } from "./ferma"
-import { FERMA_TEST_OPTIONS } from "./constants"
 import { fromPartial } from "@total-typescript/shoehorn"
+import { describe, expect, it } from "vitest"
+import { FERMA_TEST_OPTIONS } from "./constants"
+import { Ferma } from "./ferma"
 
 const { login, password } = FERMA_TEST_OPTIONS.ffd12
 

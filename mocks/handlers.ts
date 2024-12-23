@@ -1,6 +1,6 @@
+import { FERMA_TEST_OPTIONS } from "@/ferma/constants"
 import { http, HttpResponse } from "msw"
 import { composeErrorResponse, composeSuccessResponse, fermaURL } from "./utils"
-import { FERMA_TEST_OPTIONS } from "@/ferma/constants"
 
 export const mswHandlers = [
 	http.get(fermaURL("/"), () =>

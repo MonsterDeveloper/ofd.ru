@@ -1,7 +1,7 @@
-import { afterEach, describe, it, vi, expect } from "vitest"
-import { FermaAuthedFetcher, FermaFetcher } from "./fetcher"
-import { FermaApiError, FermaError } from "./errors"
+import { afterEach, describe, expect, it, vi } from "vitest"
 import { FERMA_TEST_OPTIONS } from "./constants"
+import { FermaApiError, FermaError } from "./errors"
+import { FermaAuthedFetcher, FermaFetcher } from "./fetcher"
 
 const { login, password } = FERMA_TEST_OPTIONS.ffd12
 
@@ -24,13 +24,13 @@ describe("FermaFetcher", () => {
 		)
 	})
 
-	it("throws a FermaApiError when API returns an error", async () => {
+	it("throws a FermaApiError when API returns an error", () => {
 		const fetcher = new FermaFetcher()
 
 		expect(fetcher.fetch("/error")).rejects.toThrowError(FermaApiError)
 	})
 
-	it("throws a FermaError when API returns invalid JSON", async () => {
+	it("throws a FermaError when API returns invalid JSON", () => {
 		const fetcher = new FermaFetcher()
 
 		expect(fetcher.fetch("/error/invalid-json")).rejects.toThrowError(
@@ -38,7 +38,7 @@ describe("FermaFetcher", () => {
 		)
 	})
 
-	it("throws a FermaError when API returns a network error", async () => {
+	it("throws a FermaError when API returns a network error", () => {
 		const fetcher = new FermaFetcher()
 
 		expect(fetcher.fetch("/error/network")).rejects.toThrowError(FermaError)

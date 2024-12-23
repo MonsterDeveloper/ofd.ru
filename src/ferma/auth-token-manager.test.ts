@@ -1,7 +1,7 @@
-import { describe, it, expect, vi } from "vitest"
+import { describe, expect, it, vi } from "vitest"
 import { AuthTokenManager } from "./auth-token-manager"
-import { FermaFetcher } from "./fetcher"
 import { FERMA_TEST_OPTIONS } from "./constants"
+import { FermaFetcher } from "./fetcher"
 
 const fetcher = new FermaFetcher()
 const { login, password } = FERMA_TEST_OPTIONS.ffd12

@@ -1,7 +1,5 @@
-import type { AgentType } from "./agent-type"
 import type { CheckMcMode } from "./check-mc-mode"
 import type { CorrectionInfo } from "./correction-info"
-import type { FoivId } from "./foiv-id"
 import type { IdDocumentType } from "./id-document-type"
 import type { IndustryItemRequisite } from "./industry-item-requisite"
 import type { PaymentAgentInfo } from "./payment-agent-info"
